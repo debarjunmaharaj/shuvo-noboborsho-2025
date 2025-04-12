@@ -2,7 +2,6 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/a51ccd08-e38e-458e-9212-d9d62cad09f8
 
 ## How can I edit this code?
 
@@ -71,3 +70,5 @@ Yes it is!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+<div style="text-align: center;"><b><span color="blck">সফটওয়্যারের সকল কারিগরি সহযোগিতায়ঃ </span><a href="https://www.netfie.com" target="_blank"><span style="color: black;">NETFIE&nbsp;</span></a></b></div><div style="text-align: center;"><b><span style="font-size: x-small;">বিস্তারিত জানতে যোগাযোগ করুন: 01884189495</span></b></div>
