@@ -74,16 +74,31 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Personal Greeting Section */}
-          <div className="bg-white bg-opacity-90 rounded-xl p-6 shadow-lg max-w-sm mx-auto my-8 transform hover:scale-105 transition-transform">
-            <div className="flex flex-col items-center">
-              <Avatar className="w-32 h-32 border-4 border-bengali-red mb-4">
-                <AvatarImage src="https://scontent.fcgp3-1.fna.fbcdn.net/v/t39.30808-6/487216496_650713390886824_3893499008514343840_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=GxP2nxEiUwsQ7kNvwF4MK_W&_nc_oc=AdlGCeBFeoVXuzT5FJFA619YY6D020RQAwlajGEXg-rQHwCYQm4kqIa6jwsZaA7oarc&_nc_zt=23&_nc_ht=scontent.fcgp3-1.fna&_nc_gid=hGiz9WXNh6yZLx9CRYPAig&oh=00_AfGNkrXyNHo0d7I6JdYxom-gZkZS4ovXZ7cfxHugUTZmfQ&oe=6800751C" alt="Debarjun Chakraborty" />
-                <AvatarFallback className="bg-bengali-red text-white text-2xl">DC</AvatarFallback>
-              </Avatar>
-              <h3 className="text-bengali-blue text-xl font-bold mb-1">Debarjun Chakraborty</h3>
-              <p className="text-bengali-red font-bengali text-xl font-bold">শুভ নববর্ষ ১৪৩২</p>
-              <p className="text-gray-600">Happy Nobo Borsho 1432</p>
+          {/* Personal Greeting Section with Dynamic Design */}
+          <div className="bg-gradient-to-br from-bengali-red to-bengali-orange rounded-xl p-8 shadow-xl max-w-sm mx-auto my-8 transform hover:scale-105 transition-all duration-500 hover:shadow-2xl relative overflow-hidden">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 right-0 w-40 h-40 bg-white opacity-10 rounded-full -mr-20 -mt-20"></div>
+            <div className="absolute bottom-0 left-0 w-20 h-20 bg-bengali-yellow opacity-20 rounded-full -ml-10 -mb-10"></div>
+            
+            <div className="relative flex flex-col items-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-bengali-orange via-bengali-red to-bengali-purple rounded-full animate-spin-slow opacity-70"></div>
+                <div className="absolute inset-2 bg-white rounded-full"></div>
+                <Avatar className="w-32 h-32 border-4 border-white relative z-10 animate-float">
+                  <AvatarImage src="https://scontent.fcgp3-1.fna.fbcdn.net/v/t39.30808-6/487216496_650713390886824_3893499008514343840_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=GxP2nxEiUwsQ7kNvwF4MK_W&_nc_oc=AdlGCeBFeoVXuzT5FJFA619YY6D020RQAwlajGEXg-rQHwCYQm4kqIa6jwsZaA7oarc&_nc_zt=23&_nc_ht=scontent.fcgp3-1.fna&_nc_gid=hGiz9WXNh6yZLx9CRYPAig&oh=00_AfGNkrXyNHo0d7I6JdYxom-gZkZS4ovXZ7cfxHugUTZmfQ&oe=6800751C" alt="Debarjun Chakraborty" />
+                  <AvatarFallback className="bg-bengali-red text-white text-2xl">DC</AvatarFallback>
+                </Avatar>
+              </div>
+              
+              {/* Decorative Bengali Symbols */}
+              <span className="absolute top-2 left-2 text-white opacity-30 text-2xl rotate-12">৳</span>
+              <span className="absolute bottom-2 right-2 text-white opacity-30 text-2xl -rotate-12">ঔ</span>
+              
+              <h3 className="text-white text-xl font-bold mb-1 mt-4 drop-shadow-md">Debarjun Chakraborty</h3>
+              <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full my-2">
+                <p className="text-white font-bengali text-xl font-bold animate-pulse-gentle">শুভ নববর্ষ ১৪৩২</p>
+              </div>
+              <p className="text-white/90 font-medium">Happy Nobo Borsho 1432</p>
             </div>
           </div>
           
