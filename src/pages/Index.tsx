@@ -1,6 +1,6 @@
 
 import { useEffect } from "react";
-import { Music, Paintbrush, Utensils, Shirt, Star, Gift, PartyPopper, Flower } from "lucide-react";
+import { Music, Paintbrush, Utensils, Shirt } from "lucide-react";
 import ThreeDScene from "../components/ThreeDScene";
 import CountdownTimer from "../components/CountdownTimer";
 import TraditionCard from "../components/TraditionCard";
@@ -13,33 +13,33 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 const Index = () => {
   useEffect(() => {
     toast("শুভ নববর্ষ ১৪৩২", {
-      description: "পহেলা বৈশাখের শুভেচ্ছা!",
+      description: "Welcome to Bengali New Year Celebration!",
       duration: 5000,
     });
   }, []);
 
   const traditions = [
     {
-      title: "মঙ্গল শোভাযাত্রা",
-      description: "বাংলাদেশীয় সংস্কৃতি ও ঐতিহ্যের প্রতীক পারম্পরিক মুখোশ ও মোটিফসহ রঙিন মিছিল।",
+      title: "Mangal Shobhajatra",
+      description: "Colorful processions with traditional masks and motifs that symbolize Bengali culture and heritage.",
       icon: <Paintbrush />,
       color: "bg-bengali-red",
     },
     {
-      title: "বৈশাখী খাবার",
-      description: "পান্তা ভাত, ইলিশ মাছ এবং বিভিন্ন মিষ্টি সহ পারম্পরিক বাঙালি খাবার।",
+      title: "Boishakhi Food",
+      description: "Traditional Bengali cuisine including Panta Bhat (fermented rice), Ilish (Hilsa fish), and various sweets.",
       icon: <Utensils />,
       color: "bg-bengali-yellow",
     },
     {
-      title: "বৈশাখী মেলা",
-      description: "হস্তশিল্প, লোক সংগীত এবং সাংস্কৃতিক পরিবেশনা সহ পারম্পরিক মেলা।",
+      title: "Boishakhi Mela",
+      description: "Traditional fairs featuring handicrafts, folk music, and cultural performances.",
       icon: <Music />,
       color: "bg-bengali-green",
     },
     {
-      title: "পারম্পরিক পোশাক",
-      description: "পুরুষদের পাঞ্জাবি-পায়জামা এবং মহিলাদের লাল পাড়ের সাদা শাড়ি পরিধান।",
+      title: "Traditional Attire",
+      description: "Men wearing Panjabi-Pajama and women adorning white sarees with red borders.",
       icon: <Shirt />,
       color: "bg-bengali-purple",
     },
@@ -57,36 +57,28 @@ const Index = () => {
         
         <div className="relative h-full container mx-auto px-4 pt-24 pb-12 flex flex-col items-center justify-center">
           <div className="text-center mb-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white text-shadow mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-shadow mb-4">
               <span className="font-bengali">পহেলা বৈশাখ</span>
-              <span className="block font-bengali">১৪৩২</span>
+              <span className="block">Pohela Boishakh 2025</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white text-shadow mb-8 font-bengali">
-              বাংলা নববর্ষ উদযাপন - ১৪ এপ্রিল, ২০২৫
+            <p className="text-xl md:text-2xl text-white text-shadow mb-8">
+              Bengali New Year Celebration - April 14, 2025
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-bengali-red text-white px-6 py-3 rounded-full font-medium hover:bg-red-700 transition-colors animate-pulse-gentle font-bengali">
-                উৎসবে যোগ দিন
+              <button className="bg-bengali-red text-white px-6 py-3 rounded-full font-medium hover:bg-red-700 transition-colors animate-pulse-gentle">
+                Join Celebration
               </button>
-              <button className="bg-white text-bengali-blue px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors font-bengali">
-                আরও জানুন
+              <button className="bg-white text-bengali-blue px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
+                Learn More
               </button>
             </div>
           </div>
           
-          {/* Personal Greeting Section with Enhanced Dynamic Design */}
-          <div className="bg-gradient-to-br from-bengali-red to-bengali-orange rounded-xl p-8 shadow-xl max-w-sm mx-auto my-8 transform hover:scale-105 transition-all duration-500 hover:shadow-2xl relative overflow-hidden backdrop-blur-sm">
+          {/* Personal Greeting Section with Dynamic Design */}
+          <div className="bg-gradient-to-br from-bengali-red to-bengali-orange rounded-xl p-8 shadow-xl max-w-sm mx-auto my-8 transform hover:scale-105 transition-all duration-500 hover:shadow-2xl relative overflow-hidden">
             {/* Decorative Elements */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-white opacity-10 rounded-full -mr-20 -mt-20"></div>
             <div className="absolute bottom-0 left-0 w-20 h-20 bg-bengali-yellow opacity-20 rounded-full -ml-10 -mb-10"></div>
-            
-            {/* Alpana Patterns */}
-            <div className="absolute top-4 left-4 text-white opacity-20 transform rotate-45">
-              <Flower className="w-12 h-12" />
-            </div>
-            <div className="absolute bottom-4 right-4 text-white opacity-20 transform -rotate-45">
-              <Flower className="w-12 h-12" />
-            </div>
             
             <div className="relative flex flex-col items-center">
               <div className="relative">
@@ -94,34 +86,19 @@ const Index = () => {
                 <div className="absolute inset-2 bg-white rounded-full"></div>
                 <Avatar className="w-32 h-32 border-4 border-white relative z-10 animate-float">
                   <AvatarImage src="https://scontent.fcgp3-1.fna.fbcdn.net/v/t39.30808-6/487216496_650713390886824_3893499008514343840_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=GxP2nxEiUwsQ7kNvwF4MK_W&_nc_oc=AdlGCeBFeoVXuzT5FJFA619YY6D020RQAwlajGEXg-rQHwCYQm4kqIa6jwsZaA7oarc&_nc_zt=23&_nc_ht=scontent.fcgp3-1.fna&_nc_gid=hGiz9WXNh6yZLx9CRYPAig&oh=00_AfGNkrXyNHo0d7I6JdYxom-gZkZS4ovXZ7cfxHugUTZmfQ&oe=6800751C" alt="Debarjun Chakraborty" />
-                  <AvatarFallback className="bg-bengali-red text-white text-2xl">দে</AvatarFallback>
+                  <AvatarFallback className="bg-bengali-red text-white text-2xl">DC</AvatarFallback>
                 </Avatar>
               </div>
               
               {/* Decorative Bengali Symbols */}
-              <span className="absolute top-2 left-2 text-white opacity-30 text-2xl rotate-12 font-bengali">৳</span>
-              <span className="absolute bottom-2 right-2 text-white opacity-30 text-2xl -rotate-12 font-bengali">ঔ</span>
+              <span className="absolute top-2 left-2 text-white opacity-30 text-2xl rotate-12">৳</span>
+              <span className="absolute bottom-2 right-2 text-white opacity-30 text-2xl -rotate-12">ঔ</span>
               
-              {/* Stars or festive decorations */}
-              <span className="absolute top-10 right-10 text-yellow-300 opacity-80">
-                <Star className="w-6 h-6 animate-pulse-gentle" fill="currentColor" />
-              </span>
-              <span className="absolute bottom-10 left-10 text-yellow-300 opacity-80">
-                <Star className="w-6 h-6 animate-pulse-gentle" fill="currentColor" />
-              </span>
-              
-              <h3 className="text-white text-xl font-bold mb-1 mt-4 drop-shadow-md font-bengali">দেবার্জুন চক্রবর্তী</h3>
+              <h3 className="text-white text-xl font-bold mb-1 mt-4 drop-shadow-md">Debarjun Chakraborty</h3>
               <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full my-2">
                 <p className="text-white font-bengali text-xl font-bold animate-pulse-gentle">শুভ নববর্ষ ১৪৩২</p>
               </div>
-              <p className="text-white/90 font-medium font-bengali">বৈশাখী শুভেচ্ছা</p>
-              
-              {/* Gift icon decorations */}
-              <div className="mt-2 flex justify-center gap-4">
-                <Gift className="w-5 h-5 text-white/70 animate-bounce" />
-                <PartyPopper className="w-5 h-5 text-white/70 animate-wiggle" />
-                <Gift className="w-5 h-5 text-white/70 animate-bounce" />
-              </div>
+              <p className="text-white/90 font-medium">Happy Nobo Borsho 1432</p>
             </div>
           </div>
           
@@ -136,8 +113,8 @@ const Index = () => {
       {/* Traditions Section */}
       <section id="traditions" className="py-16 px-4 bg-gray-50 alpana-pattern">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-bengali">
-            বাংলা নববর্ষের ঐতিহ্য
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Bengali New Year Traditions
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -157,8 +134,8 @@ const Index = () => {
       {/* Gallery Section */}
       <section id="gallery" className="py-16 px-4 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-bengali">
-            পহেলা বৈশাখের ছবি গ্যালারি
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Pohela Boishakh Gallery
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -174,8 +151,8 @@ const Index = () => {
                     <div className="text-6xl font-bengali mb-2">
                       {['১৪৩২', 'বৈশাখ', 'উৎসব', 'শুভ', 'নববর্ষ', 'আনন্দ'][item % 6]}
                     </div>
-                    <div className="text-xl font-bengali">
-                      {['১৪৩২', 'বৈশাখ', 'উৎসব', 'শুভ', 'নববর্ষ', 'আনন্দ'][item % 6]}
+                    <div className="text-xl">
+                      {['1432', 'Boishakh', 'Festival', 'Shubho', 'Noboborsho', 'Joy'][item % 6]}
                     </div>
                   </div>
                 </div>
@@ -200,9 +177,9 @@ const Index = () => {
           <div className="text-2xl font-bold font-bengali mb-2">
             পহেলা বৈশাখ ১৪৩২
           </div>
-          <div className="mb-4 font-bengali">বাংলা নববর্ষ ১৪৩২ (২০২৫)</div>
-          <div className="text-sm text-gray-300 font-bengali">
-            © ২০২৫ বাংলা নববর্ষ উদযাপন
+          <div className="mb-4">Pohela Boishakh 1432 (2025)</div>
+          <div className="text-sm text-gray-300">
+            © 2025 Bengali New Year Celebration
           </div>
         </div>
       </footer>

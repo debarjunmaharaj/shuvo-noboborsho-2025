@@ -32,32 +32,27 @@ const Header = () => {
         </div>
         
         <nav className="hidden md:flex space-x-8">
-          {[
-            { en: 'Home', bn: 'হোম' },
-            { en: 'Traditions', bn: 'ঐতিহ্য' },
-            { en: 'Gallery', bn: 'গ্যালারি' },
-            { en: 'Countdown', bn: 'কাউন্টডাউন' }
-          ].map((item) => (
+          {['Home', 'Traditions', 'Gallery', 'Countdown'].map((item) => (
             <a 
-              key={item.en} 
-              href={`#${item.en.toLowerCase()}`}
-              className={`font-medium hover:text-bengali-red transition-colors font-bengali ${
+              key={item} 
+              href={`#${item.toLowerCase()}`}
+              className={`font-medium hover:text-bengali-red transition-colors ${
                 isScrolled ? 'text-gray-700' : 'text-white text-shadow'
               }`}
             >
-              {item.bn}
+              {item}
             </a>
           ))}
         </nav>
         
         <button 
-          className={`px-4 py-2 rounded-full font-medium transition-colors font-bengali ${
+          className={`px-4 py-2 rounded-full font-medium transition-colors ${
             isScrolled 
               ? 'bg-bengali-red text-white' 
               : 'bg-white text-bengali-red'
           }`}
         >
-          উৎসব
+          Celebrate
         </button>
       </div>
     </header>
