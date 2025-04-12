@@ -147,7 +147,7 @@ const Index = () => {
                 <div className={`absolute inset-0 flex items-center justify-center bg-bengali-${
                   ['red', 'orange', 'yellow', 'green', 'blue', 'purple'][item % 6]
                 } bg-opacity-80`}>
-                  <div className="text-white text-center p-4">
+                  <div className="text-black text-center p-4">
                     <div className="text-6xl font-bengali mb-2">
                       {['১৪৩২', 'বৈশাখ', 'উৎসব', 'শুভ', 'নববর্ষ', 'আনন্দ'][item % 6]}
                     </div>
