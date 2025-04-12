@@ -8,6 +8,7 @@ import BoishakhBanner from "../components/BoishakhBanner";
 import Header from "../components/Header";
 import FloatingElements from "../components/FloatingElements";
 import { toast } from "sonner";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Index = () => {
   useEffect(() => {
@@ -70,6 +71,19 @@ const Index = () => {
               <button className="bg-white text-bengali-blue px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
                 Learn More
               </button>
+            </div>
+          </div>
+          
+          {/* Personal Greeting Section */}
+          <div className="bg-white bg-opacity-90 rounded-xl p-6 shadow-lg max-w-sm mx-auto my-8 transform hover:scale-105 transition-transform">
+            <div className="flex flex-col items-center">
+              <Avatar className="w-32 h-32 border-4 border-bengali-red mb-4">
+                <AvatarImage src="https://scontent.fcgp3-1.fna.fbcdn.net/v/t39.30808-6/487216496_650713390886824_3893499008514343840_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=GxP2nxEiUwsQ7kNvwF4MK_W&_nc_oc=AdlGCeBFeoVXuzT5FJFA619YY6D020RQAwlajGEXg-rQHwCYQm4kqIa6jwsZaA7oarc&_nc_zt=23&_nc_ht=scontent.fcgp3-1.fna&_nc_gid=hGiz9WXNh6yZLx9CRYPAig&oh=00_AfGNkrXyNHo0d7I6JdYxom-gZkZS4ovXZ7cfxHugUTZmfQ&oe=6800751C" alt="Debarjun Chakraborty" />
+                <AvatarFallback className="bg-bengali-red text-white text-2xl">DC</AvatarFallback>
+              </Avatar>
+              <h3 className="text-bengali-blue text-xl font-bold mb-1">Debarjun Chakraborty</h3>
+              <p className="text-bengali-red font-bengali text-xl font-bold">শুভ নববর্ষ ১৪৩২</p>
+              <p className="text-gray-600">Happy Nobo Borsho 1432</p>
             </div>
           </div>
           
