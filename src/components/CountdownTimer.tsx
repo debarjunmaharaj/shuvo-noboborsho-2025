@@ -11,6 +11,12 @@ const CountdownTimer = () => {
     seconds: 0
   });
 
+  // Bengali number converters
+  const toBengaliDigits = (number: number): string => {
+    const bengaliDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+    return number.toString().split('').map(digit => bengaliDigits[parseInt(digit)] || digit).join('');
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -39,20 +45,24 @@ const CountdownTimer = () => {
 
   return (
     <div className="py-8 px-4">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-bengali-blue">Countdown to Pohela Boishakh 2025</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-bengali-blue font-bengali">
+        পহেলা বৈশাখ ২০২৫ এর কাউন্টডাউন
+      </h2>
       <div className="flex flex-wrap justify-center gap-4 md:gap-8">
         {[
-          { label: 'Days', value: timeLeft.days },
-          { label: 'Hours', value: timeLeft.hours },
-          { label: 'Minutes', value: timeLeft.minutes },
-          { label: 'Seconds', value: timeLeft.seconds }
+          { label: 'দিন', value: timeLeft.days },
+          { label: 'ঘন্টা', value: timeLeft.hours },
+          { label: 'মিনিট', value: timeLeft.minutes },
+          { label: 'সেকেন্ড', value: timeLeft.seconds }
         ].map((item) => (
           <div 
             key={item.label} 
             className="bg-white rounded-lg shadow-lg p-4 w-20 md:w-24 text-center border-2 border-bengali-yellow animate-pulse-gentle"
           >
-            <div className="text-bengali-red font-bold text-2xl md:text-3xl">{item.value}</div>
-            <div className="text-sm text-gray-600">{item.label}</div>
+            <div className="text-bengali-red font-bold text-2xl md:text-3xl font-bengali">
+              {toBengaliDigits(item.value)}
+            </div>
+            <div className="text-sm text-gray-600 font-bengali">{item.label}</div>
           </div>
         ))}
       </div>
