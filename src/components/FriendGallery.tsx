@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Heart, Star, Sparkles } from 'lucide-react';
+import { Heart, Star, Sparkles, Camera, Gift } from 'lucide-react';
 
 interface FriendGalleryProps {
   images: string[];
@@ -11,11 +11,41 @@ interface FriendGalleryProps {
 const FriendGallery: React.FC<FriendGalleryProps> = ({ images, className }) => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
+  // Bengali celebratory messages
+  const messages = [
+    'অধোরার আনন্দ',
+    'প্রিয় অধোরা',
+    'সুন্দর মুহূর্ত',
+    'বন্ধুত্বের মাধুর্য',
+    'স্মৃতি সঞ্চয়',
+    'আনন্দ উচ্ছ্বাস'
+  ];
+
   return (
     <div className={cn("relative", className)}>
       {/* Decorative Elements */}
       <div className="absolute -top-12 -left-12 w-24 h-24 bg-bengali-yellow/30 rounded-full blur-xl"></div>
       <div className="absolute -bottom-12 -right-12 w-24 h-24 bg-bengali-pink/30 rounded-full blur-xl"></div>
+      
+      {/* Friend Name Banner */}
+      <div className="relative mb-10 overflow-hidden">
+        <div className="bg-gradient-to-r from-bengali-red via-bengali-orange to-bengali-yellow p-4 rounded-lg shadow-lg transform -rotate-1">
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+            <h3 className="text-center text-white text-3xl md:text-4xl font-bengali font-bold relative z-10">
+              <span className="relative inline-block">
+                অধোরা আনান
+                <span className="absolute -top-3 -right-4 animate-pulse-gentle">
+                  <Heart className="h-6 w-6 fill-bengali-red" />
+                </span>
+              </span>
+            </h3>
+            <p className="text-center text-white/80 mt-2 font-bengali">স্মৃতি সংগ্রহ</p>
+          </div>
+        </div>
+        <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-bengali-yellow to-transparent"></div>
+        </div>
+      </div>
       
       {/* Main Gallery Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
@@ -28,17 +58,18 @@ const FriendGallery: React.FC<FriendGalleryProps> = ({ images, className }) => {
             <div className="relative aspect-square overflow-hidden">
               <img
                 src={image}
-                alt={`বন্ধু ${index + 1}`}
+                alt={`অধোরা ${index + 1}`}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               
               {/* Overlay with Bengali festive elements */}
               <div className="absolute inset-0 bg-gradient-to-t from-bengali-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end p-4">
                 <div className="font-bengali text-white text-3xl font-bold mb-2 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
-                  {['বন্ধু', 'মিতালি', 'সখ্য', 'সাথী', 'আত্মীয়', 'প্রিয়জন'][index % 6]}
+                  {messages[index % messages.length]}
                 </div>
-                <div className="text-white/80 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 delay-100">
-                  পহেলা বৈশাখ ১৪৩২
+                <div className="text-white/80 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 delay-100 flex items-center gap-2">
+                  <Camera className="h-4 w-4" />
+                  <span>পহেলা বৈশাখ ১৪৩২</span>
                 </div>
               </div>
               
@@ -92,15 +123,16 @@ const FriendGallery: React.FC<FriendGalleryProps> = ({ images, className }) => {
             </button>
             
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-              <div className="font-bengali text-white text-xl">
-                শুভ নববর্ষ ১৪৩২
+              <div className="font-bengali text-white text-xl flex items-center gap-2">
+                <Gift className="h-5 w-5 text-bengali-yellow" />
+                <span>অধোরা আনান - {selectedImage + 1}</span>
               </div>
             </div>
             
             <div className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <Sparkles className="text-bengali-yellow h-5 w-5" />
-                <span className="font-bengali text-white text-shadow">বন্ধুর ছবি {selectedImage + 1}</span>
+                <span className="font-bengali text-white text-shadow">অধোরার ছবি {selectedImage + 1}</span>
               </div>
             </div>
           </div>
@@ -118,16 +150,30 @@ const FriendGallery: React.FC<FriendGalleryProps> = ({ images, className }) => {
             transform: `rotate(${i * 30}deg)`
           }}
         >
-          <Sparkles 
-            className={`h-8 w-8 ${
-              i % 3 === 0 
-                ? 'text-bengali-yellow' 
-                : i % 3 === 1 
-                  ? 'text-bengali-red' 
-                  : 'text-bengali-green'
-            } animate-pulse-gentle`}
-            style={{ animationDelay: `${i * 0.2}s` }}
-          />
+          {i % 3 === 0 ? (
+            <Sparkles 
+              className={`h-8 w-8 ${
+                i % 3 === 0 
+                  ? 'text-bengali-yellow' 
+                  : i % 3 === 1 
+                    ? 'text-bengali-red' 
+                    : 'text-bengali-green'
+              } animate-pulse-gentle`}
+              style={{ animationDelay: `${i * 0.2}s` }}
+            />
+          ) : i % 3 === 1 ? (
+            <Heart 
+              className="h-8 w-8 text-bengali-red animate-bounce-subtle"
+              style={{ animationDelay: `${i * 0.3}s` }}
+              fill="#E63946"
+            />
+          ) : (
+            <Star 
+              className="h-8 w-8 text-bengali-yellow animate-spin-slow"
+              style={{ animationDelay: `${i * 0.4}s` }}
+              fill="#F8B400"
+            />
+          )}
         </div>
       ))}
     </div>

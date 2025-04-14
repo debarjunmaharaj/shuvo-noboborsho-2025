@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Star, Music, Heart, GiftIcon } from 'lucide-react';
+import { Star, Music, Heart, GiftIcon, Sparkles } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,16 +43,16 @@ const Header = () => {
               isScrolled ? 'text-bengali-red' : 'text-white text-shadow'
             )}>
               <span className="relative inline-block">
-                প
+                অ
                 {!isScrolled && <span className="absolute -top-1 -right-1 text-xs text-bengali-yellow">✦</span>}
               </span>
-              <span>হেলা</span>
+              <span>ধোরা</span>
               {' '}
               <span className={cn(
                 "relative",
                 isScrolled ? "text-bengali-yellow" : "text-bengali-yellow text-shadow"
               )}>
-                <span>বৈশাখ</span>
+                <span>আনান</span>
                 {!isScrolled && (
                   <span className="absolute -bottom-1 -right-1 text-xs text-bengali-yellow">✦</span>
                 )}
@@ -92,7 +92,7 @@ const Header = () => {
               : 'bg-white text-bengali-red'
           )}
         >
-          <span className="hidden sm:inline">শুভ</span>
+          <Sparkles className="h-4 w-4" />
           <span>উদযাপন</span>
           <span className="animate-spin-slow hidden sm:inline">✦</span>
         </button>
