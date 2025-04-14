@@ -20,7 +20,7 @@ import {
 
 const Index = () => {
   useEffect(() => {
-    toast("অধোরা আনান", {
+    toast("টোনিমা শাথী", {
       description: "বাংলা নববর্ষ উদযাপনে স্বাগতম!",
       duration: 5000,
     });
@@ -156,7 +156,7 @@ const Index = () => {
               <span className="absolute top-2 left-2 text-white opacity-30 text-2xl rotate-12">৳</span>
               <span className="absolute bottom-2 right-2 text-white opacity-30 text-2xl -rotate-12">ঔ</span>
               
-              <h3 className="text-white text-xl font-bold mb-1 mt-4 drop-shadow-md font-bengali">অধোরা আনান</h3>
+              <h3 className="text-white text-xl font-bold mb-1 mt-4 drop-shadow-md font-bengali">টোনিমা শাথী</h3>
               <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full my-2">
                 <p className="text-white font-bengali text-xl font-bold animate-pulse-gentle">শুভ নববর্ষ ১৪৩২</p>
               </div>
