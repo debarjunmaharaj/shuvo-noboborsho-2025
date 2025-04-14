@@ -43,16 +43,16 @@ const Header = () => {
               isScrolled ? 'text-bengali-red' : 'text-white text-shadow'
             )}>
               <span className="relative inline-block">
-               টো
+               তনি
                 {!isScrolled && <span className="absolute -top-1 -right-1 text-xs text-bengali-yellow">✦</span>}
               </span>
-              <span>নিমা</span>
+              <span>মা </span>
               {' '}
               <span className={cn(
                 "relative",
                 isScrolled ? "text-bengali-yellow" : "text-bengali-yellow text-shadow"
               )}>
-                <span> শাথী</span>
+                <span> সাথী</span>
                 {!isScrolled && (
                   <span className="absolute -bottom-1 -right-1 text-xs text-bengali-yellow">✦</span>
                 )}
