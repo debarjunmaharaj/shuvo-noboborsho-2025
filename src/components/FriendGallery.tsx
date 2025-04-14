@@ -13,8 +13,8 @@ const FriendGallery: React.FC<FriendGalleryProps> = ({ images, className }) => {
 
   // Bengali celebratory messages
   const messages = [
-    'অধোরার আনন্দ',
-    'প্রিয় অধোরা',
+    'টোনিমা শাথী আনন্দ',
+    'প্রিয় টোনিমা শাথী',
     'সুন্দর মুহূর্ত',
     'বন্ধুত্বের মাধুর্য',
     'স্মৃতি সঞ্চয়',
@@ -33,7 +33,7 @@ const FriendGallery: React.FC<FriendGalleryProps> = ({ images, className }) => {
           <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
             <h3 className="text-center text-white text-3xl md:text-4xl font-bengali font-bold relative z-10">
               <span className="relative inline-block">
-                অধোরা আনান
+               টোনিমা শাথী
                 <span className="absolute -top-3 -right-4 animate-pulse-gentle">
                   <Heart className="h-6 w-6 fill-bengali-red" />
                 </span>
@@ -58,7 +58,7 @@ const FriendGallery: React.FC<FriendGalleryProps> = ({ images, className }) => {
             <div className="relative aspect-square overflow-hidden">
               <img
                 src={image}
-                alt={`অধোরা ${index + 1}`}
+                alt={`টোনিমা ${index + 1}`}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               
@@ -125,14 +125,14 @@ const FriendGallery: React.FC<FriendGalleryProps> = ({ images, className }) => {
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
               <div className="font-bengali text-white text-xl flex items-center gap-2">
                 <Gift className="h-5 w-5 text-bengali-yellow" />
-                <span>অধোরা আনান - {selectedImage + 1}</span>
+                <span>টোনিমা শাথী - {selectedImage + 1}</span>
               </div>
             </div>
             
             <div className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <Sparkles className="text-bengali-yellow h-5 w-5" />
-                <span className="font-bengali text-white text-shadow">অধোরার ছবি {selectedImage + 1}</span>
+                <span className="font-bengali text-white text-shadow">টোনিমা ছবি {selectedImage + 1}</span>
               </div>
             </div>
           </div>
