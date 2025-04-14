@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
-import { Music, Paintbrush, Utensils, Shirt, Camera, Heart, GiftIcon, Sparkles } from "lucide-react";
+
+import { useEffect } from "react";
+import { Music, Paintbrush, Utensils, Shirt } from "lucide-react";
 import ThreeDScene from "../components/ThreeDScene";
 import CountdownTimer from "../components/CountdownTimer";
 import TraditionCard from "../components/TraditionCard";
@@ -9,17 +10,10 @@ import FloatingElements from "../components/FloatingElements";
 import { toast } from "sonner";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import FriendGallery from "../components/FriendGallery";
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
-} from "@/components/ui/carousel";
 
 const Index = () => {
   useEffect(() => {
-    toast("টোনিমা শাথী", {
+    toast("শুভ নববর্ষ ১৪৩২", {
       description: "বাংলা নববর্ষ উদযাপনে স্বাগতম!",
       duration: 5000,
     });
@@ -53,36 +47,12 @@ const Index = () => {
   ];
 
   const friendImages = [
-    "https://scontent.fcgp3-2.fna.fbcdn.net/v/t39.30808-6/448973188_781091880790066_3709247269644610555_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=sQvmfaFIR5gQ7kNvwFX9ggc&_nc_ht=scontent.fcgp3-2.fna&oh=00_AfDvmA_kZe6V6NXaZK2cWYVX3ZKJGLlxiihHkqBHWqhM7g&oe=663AF2CF",
-    "https://scontent.fcgp3-1.fna.fbcdn.net/v/t39.30808-6/448965860_781091794123408_2192031575387899462_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=LcHlRXA7L_QQ7kNvwFXRxVG&_nc_ht=scontent.fcgp3-1.fna&oh=00_AfAC0G4iU7eUDjwJeG-VZ9dYFLVQD_8pyfhz-xqmLQvpvQ&oe=663AF350",
-    "https://scontent.fcgp3-2.fna.fbcdn.net/v/t39.30808-6/448961990_781091697456751_3127575830013307693_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=m8qx6JQyJGsQ7kNvwGaHyhh&_nc_ht=scontent.fcgp3-2.fna&oh=00_AfDRoFRfLqIJ8WF_Vux1cUeaRyKlxqkUC6cGqWq_h7G3qA&oe=663AF49B",
-    "https://scontent.fcgp3-1.fna.fbcdn.net/v/t39.30808-6/448958195_781091637456757_5254186395043405070_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=pL4UBpXaT8wQ7kNvwHN9qVy&_nc_ht=scontent.fcgp3-1.fna&oh=00_AfBcBU9jR_q2w8nO8DG8n3XOdGJn0_4r5SoHRSg5obVEzg&oe=663AF7E5",
-    "https://scontent.fcgp3-2.fna.fbcdn.net/v/t39.30808-6/448954195_781091570790097_1186462645428400288_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=w4X51HiMz7QQ7kNvwFpRlOG&_nc_ht=scontent.fcgp3-2.fna&oh=00_AfCTDUjEWyLzCCJJ7TyMFTsGqNl_G8OXaODLfVvfQKiKhw&oe=663AF71D",
-    "https://scontent.fcgp3-1.fna.fbcdn.net/v/t39.30808-6/448947598_781091504123437_1267380024567414514_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=wEzX_oGYoQgQ7kNvwEZJCzJ&_nc_ht=scontent.fcgp3-1.fna&oh=00_AfB4QRr6nVDjDluQi8G8Fes4lBjpVKJsBEYCF8aElH4Wig&oe=663AF8BD"
-  ];
-
-  // Bengali wishes for the slider
-  const wishes = [
-    {
-      message: "শুভেচ্ছা জানাই টোনিমা",
-      icon: <Heart className="h-5 w-5 text-bengali-red" fill="#E63946" />,
-      color: "bg-bengali-red/10"
-    },
-    {
-      message: "তোমার জন্য শুভকামনা",
-      icon: <GiftIcon className="h-5 w-5 text-bengali-yellow" />,
-      color: "bg-bengali-yellow/10"
-    },
-    {
-      message: "টোনিমা, তুমি সব সময় হাসো",
-      icon: <Sparkles className="h-5 w-5 text-bengali-green" />,
-      color: "bg-bengali-green/10"
-    },
-    {
-      message: "তোমার জীবন আনন্দময় হোক",
-      icon: <Music className="h-5 w-5 text-bengali-purple" />,
-      color: "bg-bengali-purple/10"
-    }
+    "https://scontent.fcgp3-2.fna.fbcdn.net/v/t51.75761-15/488553901_17872745538323620_7899721053754853040_n.jpg?stp=dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHaJNAGwlZZChpaTtgDk8VkniKHrfPZS2-eIoet89lLb1XJkf9w0GK2St00SEEvIkCSn-wXi4-4sQ3XAG1QuXI5&_nc_ohc=7Py-1jbBHE0Q7kNvwHr7kRb&_nc_oc=AdmYMnAPvsgMEcoPg1MKKoMFxuhdwRIq1SbADXjoC_CExSe3bOFnnxwaZmGTgKAWoYg&_nc_zt=23&_nc_ht=scontent.fcgp3-2.fna&_nc_gid=N-yhdP2OgFZKf_zuEopFCg&oh=00_AfGnIphfchvLxdc9Ci0H2mCiNo6gAjBV5nwW6ep-4k6bpQ&oe=68019B86",
+    "https://scontent.fcgp3-1.fna.fbcdn.net/v/t51.75761-15/476195138_17864899296323620_2567357247874024606_n.jpg?stp=dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeEDl9CUB8Bh9HON6TTDESD_Lv6RlhkTJW0u_pGWGRMlbeAVay56djXv0Cx2qwX4t8PsYn0cPbp-LNG7RtXNlFCB&_nc_ohc=wahAHlelT0cQ7kNvwELFITk&_nc_oc=AdnzBiVvcW2fQjVtlKei5ZqfXxY5wbQ4Ls3NuRaQwdgC_-VEVWfaAbG2MwlyxGcb4Zg&_nc_zt=23&_nc_ht=scontent.fcgp3-1.fna&_nc_gid=L2ELSjSXLxtxWd__-TDF5A&oh=00_AfH76ykXdBWcI7Dd1O261A4DIzkonyCtNHg8cxHjyF0vhw&oe=6801A353",
+    "https://scontent.fcgp3-2.fna.fbcdn.net/v/t39.30808-6/485652881_620146220862360_5863674025891453930_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFBNA6PjfbhamePsnroXpWvSJdLSPh3u-tIl0tI-He769qsqsvtphfoX947GQVwqUiM1MualmnC-j12hsPgR2us&_nc_ohc=0CyY_GibETcQ7kNvwHtnkXE&_nc_oc=AdnVtOuaC26S7Ex0WXQGUplzCmIeizG1-snkjbRzUd10VFup8wKjt_OfO1BFccPxRpw&_nc_zt=23&_nc_ht=scontent.fcgp3-2.fna&_nc_gid=1-dE6abe5usHUuAyb8BLMQ&oh=00_AfHUFXZBG-ZOqrrsCkv7O093yku1_uilYYrFzGiTdxc-Kw&oe=68018AC3",
+    "https://scontent.fcgp3-2.fna.fbcdn.net/v/t51.75761-15/482315209_17868452127323620_6982352382874607306_n.jpg?stp=dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEMZU0DmyfZdgjTEagGhA_sohJeydx6tD-iEl7J3Hq0P0e3B2bU2syStk7w6jw3Oul86l8EvfEDKdINwJlBWyL3&_nc_ohc=PuXxQZ9L-dkQ7kNvwHGoxcm&_nc_oc=AdlNfPRS6SCkcAgCbfAgFlJRhD9DUcub-ALBkbPfgs9On3xsSRAfZEtEQlOrP5Xj0Jo&_nc_zt=23&_nc_ht=scontent.fcgp3-2.fna&_nc_gid=SByCDQRqBWJRSLC5useyOQ&oh=00_AfEo2bwk71mVedYRuWPBYxku3kglDie1cj8EHBpmyNGmBg&oe=680184EC",
+    "https://scontent.fcgp3-1.fna.fbcdn.net/v/t51.75761-15/476341412_17864985666323620_335610114122054091_n.jpg?stp=dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFbrqsDN_Kq0gJUXbKq8cFPDRt-bjSjhKwNG35uNKOErG3N-YrHfqsKIbFwT-NCOGuTt03EUX5kdy5uhI5izVgP&_nc_ohc=YBzDCLHIc7IQ7kNvwH9XCDf&_nc_oc=AdlfHohbUNxWxVTwI7yd-EgagBcTeyKA_AprBGkEPB89sYzMC5ot-gUvZELxP8v3KTc&_nc_zt=23&_nc_ht=scontent.fcgp3-1.fna&_nc_gid=09Y6qxptdJqSf-fOLGqAWg&oh=00_AfFRKxAoHSWl-xDmqUBf4SsxIDpwACTJtia1CgYI1lCfuQ&oe=6801A224",
+    "https://scontent.fcgp3-2.fna.fbcdn.net/v/t39.30808-6/483969228_612292614981054_3570390996405755866_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHczH4dVk3JqHfFZm-pgsXoIustyf-eH6Ii6y3J_54for5_3ji6-9o0FjA11A33WhxJcKS0z0NutQCacY7P2nBw&_nc_ohc=0rFXlFWrEdEQ7kNvwEYvJsO&_nc_oc=AdnYprWv-dNK5oYTBkwnB6yPBeBYPplpCBdbqy-rKDEUd-XadQK0Cc2zJ7JkDR5uIfs&_nc_zt=23&_nc_ht=scontent.fcgp3-2.fna&_nc_gid=D67L3PdE8PGYzw10HTKqQw&oh=00_AfGR9oXaB7xUVuKJ8Ixmy-FUMbDy665VXPFbo5thEQX6Zw&oe=680170D0"
   ];
 
   return (
@@ -98,8 +68,8 @@ const Index = () => {
         <div className="relative h-full container mx-auto px-4 pt-24 pb-12 flex flex-col items-center justify-center">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-shadow mb-4">
-              <span className="font-bengali">টোনিমা শাথী</span>
-              <span className="block font-bengali">পহেলা বৈশাখ ১৪৩২</span>
+              <span className="font-bengali">পহেলা বৈশাখ</span>
+              <span className="block">পহেলা বৈশাখ ১৪৩২</span>
             </h1>
             <p className="text-xl md:text-2xl text-white text-shadow mb-8 font-bengali">
               বাংলা নববর্ষ উদযাপন - ১৪ এপ্রিল, ২০২৫
@@ -114,27 +84,6 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Wishes Carousel */}
-          <div className="max-w-md mx-auto my-8">
-            <Carousel className="w-full">
-              <CarouselContent>
-                {wishes.map((wish, index) => (
-                  <CarouselItem key={index}>
-                    <div className={`${wish.color} p-6 rounded-xl shadow-inner border border-white/20 backdrop-blur-sm`}>
-                      <div className="flex items-center justify-center gap-3">
-                        {wish.icon}
-                        <p className="text-xl font-bengali font-bold">{wish.message}</p>
-                        {wish.icon}
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-0" />
-              <CarouselNext className="right-0" />
-            </Carousel>
-          </div>
-          
           {/* Personal Greeting Section with Friend's Image */}
           <div className="bg-gradient-to-br from-bengali-red to-bengali-orange rounded-xl p-8 shadow-xl max-w-sm mx-auto my-8 transform hover:scale-105 transition-all duration-500 hover:shadow-2xl relative overflow-hidden">
             {/* Decorative Elements */}
@@ -146,8 +95,8 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-bengali-orange via-bengali-red to-bengali-purple rounded-full animate-spin-slow opacity-70"></div>
                 <div className="absolute inset-2 bg-white rounded-full"></div>
                 <Avatar className="w-32 h-32 border-4 border-white relative z-10 animate-float">
-                  <AvatarImage src={friendImages[0]} alt="টোনিমা শাথী" />
-                  <AvatarFallback className="bg-bengali-red text-white text-2xl font-bengali">টোনিমা</AvatarFallback>
+                  <AvatarImage src={friendImages[0]} alt="Friend" />
+                  <AvatarFallback className="bg-bengali-red text-white text-2xl">বন্ধু</AvatarFallback>
                 </Avatar>
               </div>
               
@@ -155,11 +104,11 @@ const Index = () => {
               <span className="absolute top-2 left-2 text-white opacity-30 text-2xl rotate-12">৳</span>
               <span className="absolute bottom-2 right-2 text-white opacity-30 text-2xl -rotate-12">ঔ</span>
               
-              <h3 className="text-white text-xl font-bold mb-1 mt-4 drop-shadow-md font-bengali">টোনিমা শাথী</h3>
+              <h3 className="text-white text-xl font-bold mb-1 mt-4 drop-shadow-md font-bengali">আমার বন্ধু</h3>
               <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full my-2">
                 <p className="text-white font-bengali text-xl font-bold animate-pulse-gentle">শুভ নববর্ষ ১৪৩২</p>
               </div>
-              <p className="text-white/90 font-medium font-bengali">আমার প্রিয় বন্ধু</p>
+              <p className="text-white/90 font-medium font-bengali">শুভ নববর্ষ ১৪৩২</p>
             </div>
           </div>
           
@@ -192,33 +141,11 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Special Message for Adhora */}
-      <section className="py-12 bg-gradient-to-r from-bengali-pink to-bengali-purple">
-        <div className="container mx-auto px-4">
-          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl shadow-lg max-w-3xl mx-auto">
-            <div className="text-center">
-              <h3 className="text-white text-3xl font-bold mb-4 font-bengali">টোনিমার জন্য বিশেষ শুভেচ্ছা</h3>
-              <div className="flex justify-center mb-4">
-                <div className="w-20 h-1 bg-white"></div>
-              </div>
-              <p className="text-white/90 mb-6 font-bengali text-lg">
-                তোমার জীবনে সব সময় আনন্দ, সাফল্য এবং সুখ থাকুক। তুমি যেমন সুন্দর, তোমার জীবনও তেমনি সুন্দর হোক।
-              </p>
-              <div className="flex items-center justify-center gap-4">
-                <Heart className="h-6 w-6 text-white fill-bengali-red animate-pulse-gentle" />
-                <Sparkles className="h-6 w-6 text-bengali-yellow animate-spin-slow" />
-                <Heart className="h-6 w-6 text-white fill-bengali-red animate-pulse-gentle" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
       {/* Gallery Section with Friend's Photos */}
       <section id="gallery" className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-bengali">
-            টোনিমার গ্যালারি
+            বন্ধুর গ্যালারি
           </h2>
           
           <FriendGallery images={friendImages} />
@@ -238,7 +165,7 @@ const Index = () => {
       <footer className="py-8 px-4 bg-bengali-blue text-white">
         <div className="container mx-auto text-center">
           <div className="text-2xl font-bold font-bengali mb-2">
-            টোনিমা শাথী - পহেলা বৈশাখ ১৪৩২
+            পহেলা বৈশাখ ১৪৩২
           </div>
           <div className="mb-4 font-bengali">পহেলা বৈশাখ ১৪৩২ (২০২৫)</div>
           <div className="text-sm text-gray-300 font-bengali mb-2">
