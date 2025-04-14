@@ -20,7 +20,7 @@ import {
 
 const Index = () => {
   useEffect(() => {
-    toast("টোনিমা শাথী", {
+    toast("তনিমা সাথী", {
       description: "বাংলা নববর্ষ উদযাপনে স্বাগতম!",
       duration: 5000,
     });
@@ -65,7 +65,7 @@ const Index = () => {
   // Bengali wishes for the slider
   const wishes = [
     {
-      message: "শুভেচ্ছা জানাই অধোরা",
+      message: "শুভেচ্ছা জানাই তনিমা",
       icon: <Heart className="h-5 w-5 text-bengali-red" fill="#E63946" />,
       color: "bg-bengali-red/10"
     },
@@ -99,7 +99,7 @@ const Index = () => {
         <div className="relative h-full container mx-auto px-4 pt-24 pb-12 flex flex-col items-center justify-center">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-shadow mb-4">
-              <span className="font-bengali">টোনিমা শাথী </span>
+              <span className="font-bengali">তনিমা সাথী  </span>
               <span className="block font-bengali">পহেলা বৈশাখ ১৪৩২</span>
             </h1>
             <p className="text-xl md:text-2xl text-white text-shadow mb-8 font-bengali">
@@ -147,8 +147,8 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-bengali-orange via-bengali-red to-bengali-purple rounded-full animate-spin-slow opacity-70"></div>
                 <div className="absolute inset-2 bg-white rounded-full"></div>
                 <Avatar className="w-32 h-32 border-4 border-white relative z-10 animate-float">
-                  <AvatarImage src={friendImages[0]} alt="টোনিমা শাথী" />
-                  <AvatarFallback className="bg-bengali-red text-white text-2xl font-bengali">টোনিমা শাথী</AvatarFallback>
+                  <AvatarImage src={friendImages[0]} alt="তনিমা সাথী " />
+                  <AvatarFallback className="bg-bengali-red text-white text-2xl font-bengali">তনিমা সাথী </AvatarFallback>
                 </Avatar>
               </div>
               
@@ -156,7 +156,7 @@ const Index = () => {
               <span className="absolute top-2 left-2 text-white opacity-30 text-2xl rotate-12">৳</span>
               <span className="absolute bottom-2 right-2 text-white opacity-30 text-2xl -rotate-12">ঔ</span>
               
-              <h3 className="text-white text-xl font-bold mb-1 mt-4 drop-shadow-md font-bengali">টোনিমা শাথী</h3>
+              <h3 className="text-white text-xl font-bold mb-1 mt-4 drop-shadow-md font-bengali">তনিমা সাথী </h3>
               <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full my-2">
                 <p className="text-white font-bengali text-xl font-bold animate-pulse-gentle">শুভ নববর্ষ ১৪৩২</p>
               </div>
@@ -198,7 +198,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl shadow-lg max-w-3xl mx-auto">
             <div className="text-center">
-              <h3 className="text-white text-3xl font-bold mb-4 font-bengali">টোনিমা শাথী জন্য বিশেষ শুভেচ্ছা</h3>
+              <h3 className="text-white text-3xl font-bold mb-4 font-bengali">তনিমা সাথী জন্য বিশেষ শুভেচ্ছা</h3>
               <div className="flex justify-center mb-4">
                 <div className="w-20 h-1 bg-white"></div>
               </div>
@@ -219,7 +219,7 @@ const Index = () => {
       <section id="gallery" className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-bengali">
-           টোনিমা শাথী গ্যালারি
+           তনিমা সাথী গ্যালারি
           </h2>
           
           <FriendGallery images={friendImages} />
@@ -239,7 +239,7 @@ const Index = () => {
       <footer className="py-8 px-4 bg-bengali-blue text-white">
         <div className="container mx-auto text-center">
           <div className="text-2xl font-bold font-bengali mb-2">
-           টোনিমা শাথী - পহেলা বৈশাখ ১৪৩২
+           তনিমা সাথী - পহেলা বৈশাখ ১৪৩২
           </div>
           <div className="mb-4 font-bengali">পহেলা বৈশাখ ১৪৩২ (২০২৫)</div>
           <div className="text-sm text-gray-300 font-bengali mb-2">
