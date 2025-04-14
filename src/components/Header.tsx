@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Star, Music, Heart, GiftIcon, Sparkles } from 'lucide-react';
@@ -43,16 +42,16 @@ const Header = () => {
               isScrolled ? 'text-bengali-red' : 'text-white text-shadow'
             )}>
               <span className="relative inline-block">
-                অ
+                ট
                 {!isScrolled && <span className="absolute -top-1 -right-1 text-xs text-bengali-yellow">✦</span>}
               </span>
-              <span>ধোরা</span>
+              <span>োনিমা</span>
               {' '}
               <span className={cn(
                 "relative",
                 isScrolled ? "text-bengali-yellow" : "text-bengali-yellow text-shadow"
               )}>
-                <span>আনান</span>
+                <span>শাথী</span>
                 {!isScrolled && (
                   <span className="absolute -bottom-1 -right-1 text-xs text-bengali-yellow">✦</span>
                 )}
@@ -98,7 +97,6 @@ const Header = () => {
         </button>
       </div>
       
-      {/* Decorative bottom border that appears when scrolled */}
       {isScrolled && (
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-bengali-red via-bengali-yellow to-bengali-green"></div>
       )}

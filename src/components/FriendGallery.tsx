@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Heart, Star, Sparkles, Camera, Gift } from 'lucide-react';
@@ -33,7 +32,7 @@ const FriendGallery: React.FC<FriendGalleryProps> = ({ images, className }) => {
           <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
             <h3 className="text-center text-white text-3xl md:text-4xl font-bengali font-bold relative z-10">
               <span className="relative inline-block">
-                অধোরা আনান
+                টোনিমা শাথী
                 <span className="absolute -top-3 -right-4 animate-pulse-gentle">
                   <Heart className="h-6 w-6 fill-bengali-red" />
                 </span>
